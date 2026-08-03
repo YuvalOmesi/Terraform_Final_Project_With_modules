@@ -20,7 +20,7 @@ variable "vpc_cidr" {
     default = "10.0.0.0/16"
 }
 
-variable "public_subnet_ciders" {
+variable "public_subnet_cidrs" {
     type = list(string)
     default = [
         "10.0.1.0/24",
@@ -28,7 +28,7 @@ variable "public_subnet_ciders" {
     ]
 }
 
-variable "db_subnet_ciders" {
+variable "db_subnet_cidrs" {
     type = list(string)
     default = [
         "10.0.21.0/24",
@@ -36,7 +36,7 @@ variable "db_subnet_ciders" {
     ]
 }
 
-variable "private_subnet_ciders" {
+variable "private_subnet_cidrs" {
     type = list(string)
     default = [
         "10.0.11.0/24",
