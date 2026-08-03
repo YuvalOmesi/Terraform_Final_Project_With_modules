@@ -23,3 +23,5 @@ Additional points:
 ⚠️ Important Notes before running:
 * S3 Bucket Name - Don't forget to change the S3 backend bucket name in `main.tf` to match your own bucket before running.
 * AWS Tokens - Remember to export your AWS credentials/tokens (`AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, etc.) in your terminal before running `terraform init`.
+
+<img width="1579" height="407" alt="צילום מסך 2026-08-03 164241" src="https://github.com/user-attachments/assets/42161f21-df6a-403c-92cf-8fedfef7bb3f" />
