@@ -20,9 +20,9 @@ resource "aws_internet_gateway" "main" {
 ##-------------------------------------------------------------------------------------------##
 
 resource "aws_subnet" "public-subnets" {
-  count = length(var.public_subnet_ciders)
+  count = length(var.public_subnet_cidrs)
   vpc_id     = aws_vpc.main.id
-  cidr_block = element(var.public_subnet_ciders, count.index)
+  cidr_block = element(var.public_subnet_cidrs, count.index)
   availability_zone = data.aws_availability_zones.available.names[count.index]
   map_public_ip_on_launch = true
   tags = {
@@ -53,9 +53,9 @@ resource "aws_route_table_association" "public_routes" {
 ##-------------------------------------------------------------------------------------------##
 
 resource "aws_subnet" "db-subnets" {
-  count = length(var.db_subnet_ciders)
+  count = length(var.db_subnet_cidrs)
   vpc_id     = aws_vpc.main.id
-  cidr_block = element(var.db_subnet_ciders, count.index)
+  cidr_block = element(var.db_subnet_cidrs, count.index)
   availability_zone = data.aws_availability_zones.available.names[count.index]
   
   tags = {
@@ -84,9 +84,9 @@ resource "aws_route_table_association" "db_routes" {
 ##-------------------------------------------------------------------------------------------##
 
 resource "aws_subnet" "private-subnets" {
-  count = length(var.private_subnet_ciders)
+  count = length(var.private_subnet_cidrs)
   vpc_id     = aws_vpc.main.id
-  cidr_block = element(var.private_subnet_ciders, count.index)
+  cidr_block = element(var.private_subnet_cidrs, count.index)
   availability_zone = data.aws_availability_zones.available.names[count.index]
   
   tags = {
