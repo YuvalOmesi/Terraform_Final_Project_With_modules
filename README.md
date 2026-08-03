@@ -1,6 +1,8 @@
 # Terraform_Final_Project_With_modules
 
-Hello Dima. This is my Terraform AWS project. Just like the last project that was split into Network and Servers, this time I rebuilt it using modules:
+Hello Dima. 
+
+This is my Terraform AWS project. Just like the last project that was split into Network and Servers, this time I rebuilt it using modules:
 
 1. Network Module (inside modules folder):
    * Provisions a VPC (10.0.0.0/16) with an Internet Gateway.
